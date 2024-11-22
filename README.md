@@ -1,39 +1,16 @@
-# CVDs-Detection
-# Overview
-Primary Goal: Develop a robust machine learning model to accurately predict the risk of heart failure in patients.
+# Heart Diseases Prediction Model
+## Overview
+1) Primary Goal: Develop a robust machine learning model to accurately predict the risk of heart failure in patients.
 
-Data Utilization: Leverage comprehensive clinical data, including patient history and key health indicators, for model development.
+2) Data Utilization: Leverage comprehensive clinical data, including patient history and key health indicators, for model development.
 
-Objective: Facilitate early detection and timely intervention to manage heart failure risk.
+3) Objective: Facilitate early detection and timely intervention to manage heart failure risk.
 
-Outcome: Significantly improve patient outcomes and reduce mortality rates associated with cardiovascular diseases.
+4) Outcome: Significantly improve patient outcomes and reduce mortality rates associated with cardiovascular diseases.
 
-Motivation
-Global Impact: Cardiovascular diseases (CVDs) are the leading cause of death globally, responsible for 17.9 million deaths annually, with heart attacks and strokes causing most of these deaths.
 
-Predictive Model Development: Motivated by the need to develop a predictive model for heart failure using a dataset with 11 key features to aid early detection and management for high-risk individuals.
-
-# Challenges:
-
-Ensuring data accuracy.
-
-Selecting relevant features.
-
-Creating a model that generalizes well across diverse populations.
-
-Integrating the model into clinical practice.
-
-Driving Force: The potential to save lives drives the efforts despite these challenges.
-
-# Novelty
-Accessible Health Intelligence: The system leverages machine learning insights to assist healthcare providers and individuals in making informed decisions, promoting early intervention and effective management of CVD risks.
-
-Health Suggestions Based on Predictions: Using machine learning predictions to provide personalized health suggestions for individuals. These recommendations aim to help users mitigate risks associated with cardiovascular diseases by addressing factors such as lifestyle, diet, and physical activity.
-
-Predictive Modeling for CVDs: Implementation of hybrid machine learning models combining multiple algorithms (e.g., Random Forest, Logistic Regression, SVC, KNN, Decision Tree, and XGBoost) to enhance the accuracy and robustness of cardiovascular disease (CVD) prediction.
-
-# Overview of the Methodology
-##  Data Preprocessing:
+## Overview of the Methodology
+### 1) Data Preprocessing:
 
 Cleaned the dataset by removing duplicates and outliers.
 
@@ -41,26 +18,61 @@ Created a new feature, BMI (Body Mass Index), for better predictions.
 
 Split the data into training and testing sets (80:20 ratio).
 
-## Model Development:
-
+### 2) Model Development:
 Trained six machine learning models:
 
-Random Forest
+1) Random Forest
 
-Logistic Regression
+2) Logistic Regression
 
-Support Vector Classifier (SVC)
+3) Support Vector Classifier (SVC)
 
-K-Nearest Neighbors (KNN)
+4) K-Nearest Neighbors (KNN)
 
-Decision Tree
+5) Decision Tree
 
-Gradient Boosting
+6) Gradient Boosting
 
 Saved the trained models using the Joblib library for efficient reuse.
 
-## Backend Implementation:
+### 3) Backend Implementation:
 
 Built a Flask-based backend to handle predictions.
 
 The backend receives input data, processes it through the models, averages the predictions, and sends the final result to the frontend.
+
+## Design Workflow
+### 1) Input Data:
+
+User enters feature values (age, gender, height, etc.) via the frontend.
+
+### 2) Backend Processing:
+
+Input is sent to the backend via an API request.
+
+Features are passed to each ML model for prediction.
+
+The average of model outputs determines the final prediction.
+
+### 3) Output:
+
+Final prediction (e.g., "High Risk of Heart Failure") is sent back to the frontend for display.
+
+## Steps to Run the Project
+### 1) Install Required Libraries
+pip install numpy pandas matplotlib flask django requests scikit-learn tensorflow keras joblib
+Download the Pre-trained Model File
+
+### 2) Download the .pkl file from the following link:
+https://drive.google.com/drive/folders/1doG0jk21IvYo7TzDsvhHXHiSziKPH8b8
+
+Save the file in your project directory.
+
+### 3) Run the Application
+
+Execute the app.py file.
+Wait until the program initializes and starts running.
+
+### 4) Access the Application
+
+Open your web browser and navigate to: http://127.0.0.1:5000
