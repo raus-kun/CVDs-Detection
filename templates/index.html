@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Failure Prediction</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Heart Failure Prediction</h1>
+        <form action="/predict" method="POST">
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" name="age" required>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender (1=Male, 2=Female):</label>
+                <input type="number" name="gender" required>
+            </div>
+            <div class="form-group">
+                <label for="height">Height (cm):</label>
+                <input type="number" name="height" required>
+            </div>
+            <div class="form-group">
+                <label for="weight">Weight (kg):</label>
+                <input type="number" name="weight" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="ap_hi">Systolic Blood Pressure (ap_hi):</label>
+                <input type="number" name="ap_hi" required>
+            </div>
+            <div class="form-group">
+                <label for="ap_lo">Diastolic Blood Pressure (ap_lo):</label>
+                <input type="number" name="ap_lo" required>
+            </div>
+            <div class="form-group">
+                <label for="cholesterol">Cholesterol (1=Normal, 2=Above Normal, 3=Well Above Normal):</label>
+                <input type="number" name="cholesterol" required>
+            </div>
+            <div class="form-group">
+                <label for="gluc">Glucose (1=Normal, 2=Above Normal, 3=Well Above Normal):</label>
+                <input type="number" name="gluc" required>
+            </div>
+            <div class="form-group">
+                <label for="smoke">Smoke (0=No, 1=Yes):</label>
+                <input type="number" name="smoke" required>
+            </div>
+            <div class="form-group">
+                <label for="alco">Alcohol Intake (0=No, 1=Yes):</label>
+                <input type="number" name="alco" required>
+            </div>
+            <div class="form-group">
+                <label for="active">Physical Activity (0=No, 1=Yes):</label>
+                <input type="number" name="active" required>
+            </div>
+            <div class="form-group">
+                <label for="bmi">BMI:</label>
+                <input type="number" name="bmi" step="0.01" required>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
