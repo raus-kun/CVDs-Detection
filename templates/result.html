@@ -9,13 +9,11 @@
 <body>
     <div class="container">
         <h1>Prediction Result</h1>
-        <p><strong>Final Prediction:</strong> {{ final_prediction }}</p>
-        <h2>Individual Model Predictions</h2>
-        <ul>
-            {% for model, prediction in individual_predictions.items() %}
-                <li>{{ model }}: {{ prediction }}</li>
-            {% endfor %}
-        </ul>
+        
+        <p>Using model: <strong>{{ model_used }}</strong></p>
+        <p>Final Prediction: <strong>{{ prediction_result }}</strong></p>
+        
+        <br>
         <a href="/">Back to Form</a>
     </div>
 </body>
